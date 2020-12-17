@@ -1,0 +1,3 @@
+<aura:event type="APPLICATION">
+    <aura:attribute name="baseball" type="Major_Sport_Venues__c[]"/>
+</aura:event>

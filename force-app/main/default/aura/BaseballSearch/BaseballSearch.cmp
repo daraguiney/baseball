@@ -1,0 +1,15 @@
+<aura:component controller="BaseballSearchController">
+    <aura:registerEvent name="BaseballsLoaded" type="c:BaseballsLoaded"/>
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}"/>
+    <aura:attribute name="searchTerm" type="String" default="baseball"/>
+    <lightning:card title="Baseball Search" iconName="standard:search">
+        <div class="slds-form slds-p-around_x-small">
+            <lightning:input
+                label="Search"
+                variant="label-hidden"
+                value="{!v.searchTerm}"
+                placeholder="Search by Description, Name, Address or Color."
+                onchange="{!c.onSearchTermChange}"/>
+        </div>
+    </lightning:card>
+</aura:component>

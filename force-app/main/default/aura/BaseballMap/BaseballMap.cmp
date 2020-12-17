@@ -1,0 +1,14 @@
+<aura:component>
+    <aura:handler event="c:BaseballsLoaded" action="{!c.onBaseballsLoaded}"/>
+    <aura:attribute name="mapMarkers" type="Map[]"/>
+    <lightning:card title="Baseball Map" iconName="action:map">
+        
+         <lightning:map mapMarkers="{!v.mapMarkers}"
+
+                center="{! v.center }"
+                zoomLevel="{! v.zoomLevel }"
+                markersTitle="{! v.markersTitle }"
+                showFooter="{ !v.showFooter }">
+        </lightning:map>
+    </lightning:card>
+</aura:component>
